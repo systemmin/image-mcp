@@ -1,0 +1,25 @@
+{
+  "name": "context-mcp",
+  "version": "1.0.0",
+  "description": "视觉识别 MCP 服务器，支持 Claude (Anthropic)、智谱 (GLM-4V)、Ollama 三大视觉 API",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "context-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "node node_modules/typescript/bin/tsc",
+    "start": "node dist/index.js",
+    "dev": "node node_modules/typescript/bin/tsc && node dist/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "dotenv": "^16.4.5",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.0"
+  }
+}
