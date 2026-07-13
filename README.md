@@ -2,7 +2,7 @@
 
 一个基于 [Model Context Protocol](https://modelcontextprotocol.io/) 的图片识别服务器，统一封装三大视觉 API 后端，让 Claude Desktop / Cursor / 任何 MCP 客户端都能调用图片描述、问答与多图分析能力。
 
-> 📦 **npm 包名:`@systemmmin/image-mcp`**(bin 命令 `image-mcp`),可直接 `npx @systemmmin/image-mcp` 运行,无需克隆仓库。
+> 📦 **npm 包名:`@systemmin/image-mcp`**(bin 命令 `image-mcp`),可直接 `npx @systemmin/image-mcp` 运行,无需克隆仓库。
 
 ## ✨ 支持的视觉后端
 
@@ -30,13 +30,13 @@
 ### 方式一:直接用 npx(推荐,无需克隆)
 
 ```bash
-npx @systemmmin/image-mcp
+npx @systemmin/image-mcp
 ```
 
 或全局安装:
 
 ```bash
-npm install -g @systemmmin/image-mcp
+npm install -g @systemmin/image-mcp
 image-mcp
 ```
 
@@ -104,16 +104,16 @@ export MCP_TOOL_TIMEOUT=300000
 
 ```bash
 # 仅当前项目可用(local scope,默认)
-claude mcp add image-mcp -- npx @systemmmin/image-mcp
+claude mcp add image-mcp -- npx @systemmin/image-mcp
 
 # 或全局所有项目可用(user scope)
-claude mcp add image-mcp --scope user -- npx @systemmmin/image-mcp
+claude mcp add image-mcp --scope user -- npx @systemmin/image-mcp
 ```
 
 需要传入 API 密钥时用 `-e`(可多次):
 
 ```bash
-claude mcp add image-mcp --scope user -e ANTHROPIC_API_KEY=sk-ant-xxx -e DEFAULT_PROVIDER=anthropic -- npx @systemmmin/image-mcp
+claude mcp add image-mcp --scope user -e ANTHROPIC_API_KEY=sk-ant-xxx -e DEFAULT_PROVIDER=anthropic -- npx @systemmin/image-mcp
 ```
 
 > 也可不传 `-e`,改为在你运行 `claude` 的目录放一个 `.env` 文件(dotenv 会自动加载)。
@@ -126,7 +126,7 @@ claude mcp add image-mcp --scope user -e ANTHROPIC_API_KEY=sk-ant-xxx -e DEFAULT
   "mcpServers": {
     "image-mcp": {
       "command": "npx",
-      "args": ["@systemmmin/image-mcp"],
+      "args": ["@systemmin/image-mcp"],
       "env": {
         "ANTHROPIC_API_KEY": "sk-ant-xxx",
         "DEFAULT_PROVIDER": "anthropic"
@@ -145,7 +145,7 @@ claude mcp add image-mcp --scope user -e ANTHROPIC_API_KEY=sk-ant-xxx -e DEFAULT
   "mcpServers": {
     "image-mcp": {
       "command": "npx",
-      "args": ["@systemmmin/image-mcp"],
+      "args": ["@systemmin/image-mcp"],
       "env": {
         "ANTHROPIC_API_KEY": "sk-ant-xxx",
         "ZHIPU_API_KEY": "xxx.xxx",
@@ -160,7 +160,7 @@ claude mcp add image-mcp --scope user -e ANTHROPIC_API_KEY=sk-ant-xxx -e DEFAULT
 
 ### Cursor / 其他 MCP 客户端
 
-按对应客户端文档添加一个 stdio 类型的 MCP server，命令为 `npx @systemmmin/image-mcp`（全局安装后也可直接用 `image-mcp`）。
+按对应客户端文档添加一个 stdio 类型的 MCP server，命令为 `npx @systemmin/image-mcp`（全局安装后也可直接用 `image-mcp`）。
 
 ## 🧪 调试
 
