@@ -1,11 +1,42 @@
 {
-  "name": "context-mcp",
+  "name": "@systemmin/image-mcp",
   "version": "1.0.0",
   "description": "视觉识别 MCP 服务器，支持 Claude (Anthropic)、智谱 (GLM-4V)、Ollama 三大视觉 API",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "context-mcp": "dist/index.js"
+    "image-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    ".env.example"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "author": "Mr.fang",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vision",
+    "image",
+    "anthropic",
+    "claude",
+    "zhipu",
+    "glm-4v",
+    "ollama"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/systemmin/image-mcp.git"
+  },
+  "homepage": "https://github.com/systemmin/image-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/systemmin/image-mcp/issues"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
     "build": "node node_modules/typescript/bin/tsc",
