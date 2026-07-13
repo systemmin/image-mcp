@@ -125,6 +125,7 @@ claude mcp add image-mcp --scope user -e ANTHROPIC_API_KEY=sk-ant-xxx -e DEFAULT
 {
   "mcpServers": {
     "image-mcp": {
+	  "type": "stdio",
       "command": "npx",
       "args": ["@systemmin/image-mcp"],
       "env": {
@@ -144,6 +145,7 @@ claude mcp add image-mcp --scope user -e ANTHROPIC_API_KEY=sk-ant-xxx -e DEFAULT
 {
   "mcpServers": {
     "image-mcp": {
+	  "type": "stdio",
       "command": "npx",
       "args": ["@systemmin/image-mcp"],
       "env": {
