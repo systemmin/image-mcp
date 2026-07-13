@@ -7,7 +7,7 @@ import { resolveProvider } from "./utils/config.js";
 import { getProvider } from "./providers/index.js";
 
 const server = new McpServer({
-  name: "context-mcp",
+  name: "image-mcp",
   version: "1.0.0",
 });
 
@@ -101,10 +101,10 @@ server.tool(
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("[context-mcp] 视觉识别 MCP 服务器已启动 (stdio)");
+  console.error("[image-mcp] 视觉识别 MCP 服务器已启动 (stdio)");
 }
 
 main().catch((err) => {
-  console.error("[context-mcp] 启动失败:", err);
+  console.error("[image-mcp] 启动失败:", err);
   process.exit(1);
 });

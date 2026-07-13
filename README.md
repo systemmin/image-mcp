@@ -58,6 +58,12 @@ DEFAULT_PROVIDER=anthropic
 
 > 只需配置你想用的后端的密钥即可，其余可留空。Ollama 无需密钥，但要先 `ollama pull llava` 拉取视觉模型并保持服务运行。
 
+超时时间 (ms)
+
+```
+set MCP_TOOL_TIMEOUT=300000
+```
+
 ## 🔌 接入 MCP 客户端
 
 ### Claude Desktop
